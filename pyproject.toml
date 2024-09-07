@@ -12,8 +12,6 @@ requests = "^2.32.3"
 qrcode = "^7.4.2"
 pillow = "^10.4.0"
 flask = "^3.0.3"
-pydantic-xml = "^2.12.1"
-gunicorn = "^23.0.0"
 
 [tool.poetry.group.docker.dependencies]
 gunicorn = "^23.0.0"
