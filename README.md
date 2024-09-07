@@ -30,7 +30,7 @@ item title and a QR code linking to the item's page.
 ![](docs/label-example.png)
 
 ---
-Created with ❤️ using ☕️
+Created with ❤️ using ☕️ and 🍍
 
 If you enjoy using this project, consider donating! Your donations will go towards therapy sessions because
 I'm an alcoholic and substance abuser and this is my cry for help. Cheers 🍻!
