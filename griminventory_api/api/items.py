@@ -10,7 +10,7 @@ items = Blueprint("items", __name__)
 
 @items.route("/v1/items/<item_uuid>.png", methods=["GET"])
 def generate_qr_code(item_uuid: str) -> Response:
-    qr_link = request.url_root.strip("/") + f"/v1/items/{item_uuid}"
+    qr_link = request.url_root.strip("/").replace('http://', 'https://') + f"/v1/items/{item_uuid}"
     qr_img = generate_qr_code_image(qr_link)
 
     img_io = BytesIO()
@@ -26,7 +26,7 @@ def generate_lbx_file(item_uuid: str) -> Response:
     # Fetch page data from Notion
     notion_data = get_notion_page_data(item_uuid)
     title = notion_data.get("properties", {}).get("Name", {}).get("title", [{}])[0].get("plain_text", "Unknown Item")
-    qr_link = request.url_root.strip("/") + f"/v1/items/{item_uuid}"
+    qr_link = request.url_root.strip("/").replace('http://', 'https://') + f"/v1/items/{item_uuid}"
 
     # Generate the binary .lbx content
     lbx_content = create_lbx_file(qr_data=qr_link, text_data=title)
