@@ -15,7 +15,9 @@ item title and a QR code linking to the item's page.
 
 ## Installation
 
-## Usage Endpoints
+## Usage
+
+### Endpoints
 
 | Endpoint                   | Method | Description                                                                               |
 |----------------------------|--------|-------------------------------------------------------------------------------------------|
@@ -23,3 +25,12 @@ item title and a QR code linking to the item's page.
 | `/v1/items/:item_uuid.png` | GET    | Returns a QR code PNG linking to the Notion page for the given `item_uuid`.               |
 | `/v1/items/:item_uuid.lbx` | GET    | Returns a `.lbx` file for Brother P-touch Editor containing the Notion title and QR code. |
 
+### Label example
+
+![](docs/label-example.png)
+
+---
+Created with ❤️ using ☕️
+
+If you enjoy using this project, consider donating! Your donations will go towards therapy sessions because
+I'm an alcoholic and substance abuser and this is my cry for help. Cheers 🍻!
