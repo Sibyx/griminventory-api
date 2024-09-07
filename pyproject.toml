@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "griminventory-api"
+version = "0.1.0"
+description = "Simple Inventory app based on the Notion Database backend"
+authors = ["Jakub Dubec <jakub.dubec@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+requests = "^2.32.3"
+qrcode = "^7.4.2"
+pillow = "^10.4.0"
+flask = "^3.0.3"
+pydantic-xml = "^2.12.1"
+gunicorn = "^23.0.0"
+
+[tool.poetry.group.docker.dependencies]
+gunicorn = "^23.0.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.8.0"
+
+[tool.black]
+line-length = 119
+target-version = ['py312']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.github
+  | .venv
+)/
+'''
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
